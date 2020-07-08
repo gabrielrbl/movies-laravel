@@ -8,7 +8,7 @@ class CreateFilmeTable extends Migration {
     public function up() {
         Schema::create('filme', function (Blueprint $table) {
             $table->id();
-            $table->char('titulo', 255)->unique();
+            $table->string('titulo')->unique();
             $table->text('resumo');
             $table->timestamps();
         });

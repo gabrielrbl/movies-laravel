@@ -8,7 +8,7 @@ class CreateAtorTable extends Migration {
     public function up() {
         Schema::create('ator', function (Blueprint $table) {
             $table->id();
-            $table->char('nome', 255);
+            $table->string('nome');
             $table->timestamps();
         });
     }

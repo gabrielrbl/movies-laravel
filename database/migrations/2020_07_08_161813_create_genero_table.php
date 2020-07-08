@@ -8,7 +8,7 @@ class CreateGeneroTable extends Migration {
     public function up() {
         Schema::create('genero', function (Blueprint $table) {
             $table->id();
-            $table->char('genero', 255);
+            $table->string('genero')->unique();
             $table->timestamps();
         });
     }
