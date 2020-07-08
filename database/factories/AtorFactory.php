@@ -2,9 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\ator;
+use App\Models\Ator;
 use Faker\Generator as Faker;
 
-$factory->define(ator::class, function (Faker $faker) {
-    return [];
+$factory->define(Ator::class, function (Faker $faker) {
+    return [
+        'nome' => $faker->name
+    ];
 });

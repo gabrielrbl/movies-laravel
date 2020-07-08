@@ -8,7 +8,8 @@ use App\Models\Ator;
 
 class AtorController extends Controller {
     public function index(){
-
+        $atores = Ator::all();
+        return view('ator.index', ["atores" => $atores]);
     }
 
     public function create() {

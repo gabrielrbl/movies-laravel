@@ -15,9 +15,9 @@
 @endif
 
 @foreach ($generos as $genero)
-    <h1>Genero {{ $genero->id }}</h1>
+    <h1>Gênero: {{ $genero->id }}</h1>
     <ul>
-        <li></li>
+        <li>{{ $genero->genero }}</li>
     </ul>
 @endforeach
 </body>

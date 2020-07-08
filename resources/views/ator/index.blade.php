@@ -15,9 +15,9 @@
 @endif
 
 @foreach ($atores as $ator)
-    <h1>Ator {{ $ator->id }}</h1>
+    <h1>Ator: {{ $ator->id }}</h1>
     <ul>
-        <li></li>
+        <li>{{ $ator->nome }}</li>
     </ul>
 @endforeach
 </body>

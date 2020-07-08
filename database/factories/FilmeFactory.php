@@ -2,9 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\filme;
+use App\Models\Filme;
 use Faker\Generator as Faker;
 
-$factory->define(filme::class, function (Faker $faker) {
+$factory->define(Filme::class, function (Faker $faker) {
     return [];
 });
