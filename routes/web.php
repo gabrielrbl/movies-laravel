@@ -9,7 +9,8 @@ Route::resource('genero', 'GeneroController');
 Route::resource('ator', 'AtorController');
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect()->route('filme.index');
 });
 
 Auth::routes();

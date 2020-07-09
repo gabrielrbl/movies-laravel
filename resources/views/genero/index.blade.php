@@ -1,24 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Gêneros</title>
-</head>
+@extends('layouts.app')
 
-<body>
-    @if (Route::has('login'))
-    @auth
-        <a href="{{ url('/home') }}">Início</a>
-    @else
-        <a href="{{ route('login') }}">Login</a>
-        <a href="{{ route('register') }}">Registrar</a>
-    @endauth
-@endif
+@section('title', "Gêneros")
 
-@foreach ($generos as $genero)
-    <h1>Gênero: {{ $genero->id }}</h1>
-    <ul>
-        <li>{{ $genero->genero }}</li>
-    </ul>
-@endforeach
-</body>
-</html>
+@section('content')
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Gêneros</h1>
+    </div>
+
+    <hr class="my-0">
+</div>
+
+<div class="album text-muted">
+    <div class="container">
+        <div class="row">
+            @foreach ($generos as $genero)
+                <h1>Gênero: {{ $genero->id }}</h1>
+                <ul>
+                    <li>{{ $genero->genero }}</li>
+                </ul>
+            @endforeach
+        </div>
+    </div>
+</div>
+@endsection

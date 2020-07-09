@@ -8,10 +8,10 @@ class CreateFilmeatoresTable extends Migration {
     public function up() {
         Schema::create('filmeatores', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_filme');
-            $table->unsignedBigInteger('id_ator');
-            $table->foreign('id_filme')->references('id')->on('filme')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('id_ator')->references('id')->on('ator')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('filme_id');
+            $table->unsignedBigInteger('ator_id');
+            $table->foreign('filme_id')->references('id')->on('filme')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('ator_id')->references('id')->on('ator')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
